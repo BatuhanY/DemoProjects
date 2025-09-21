@@ -1,0 +1,9 @@
+[tool.ruff]
+# linting ruleset
+select = ["E", "F", "W", "C90", "I"]
+# ignored rules
+ignore = []  # Example: "E501" is line length
+# Maximum line length
+line-length = 88
+# Enable automatic fixes for compatible rules
+fix = true
