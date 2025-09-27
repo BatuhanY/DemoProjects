@@ -2,7 +2,9 @@
 # linting ruleset
 select = ["E", "F", "W", "C90", "I"]
 # ignored rules
-ignore = []  # Example: "E501" is line length
+ignore = ["C901"]       # example: disable complexity checks
+                        # this project has a lot of UI if-else checks
+                        # thus using arbitrary complexity limits are not useful
 # Maximum line length
 line-length = 88
 # Enable automatic fixes for compatible rules

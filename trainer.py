@@ -1,15 +1,17 @@
-import os
 import datetime
-import tensorflow as tf
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Flatten, Dense, Conv2D, MaxPooling2D, Dropout
-from tensorflow.keras.callbacks import ModelCheckpoint
+import os
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # 0 = all messages, 1 = info, 2 = warnings, 3 = errors
+import tensorflow as tf
+from tensorflow.keras.callbacks import ModelCheckpoint
+from tensorflow.keras.layers import Conv2D, Dense, Dropout, Flatten, MaxPooling2D
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+# 0 = all messages, 1 = info, 2 = warnings, 3 = errors
 
 # globals
-CLASS_NAMES = ['apple', 'none']     # serves no code purpose, only here to remind me the labels of outcomes
+CLASS_NAMES = ['apple', 'none']     # only here to remind me the labels of outcomes
 IMAGE_SIZE = (64, 64)
 BATCH_SIZE = 32
 EPOCHS = 10
